@@ -1,0 +1,42 @@
+/** This program is designed to create a raining animation */
+
+// This variables are created to specify the x and y coordinates in each individual rain drops.
+var xPositions = [0, 10, 20, 30];
+var yPositions = [0, 10, 20, 40];
+
+// This for loop is designed to put another value into the 'xPositions' and 'yPositions' arrays.
+for(var i = 0; i < 30; i++) {
+    xPositions.push(random(0,400));
+    yPositions.push(random(0,400));
+}
+
+// This function continuously run the code below.
+draw = function() {
+
+    /* This if statement enables the user to add rain mass to the animation, by holding a mouse button. This code adds multiple rain drops at once. */
+    if (mouseIsPressed) {
+        xPositions.push(random(0,400));
+        yPositions.push(random(0,400));
+    }
+        // I modified the background to my liking :)
+        background(64, 85, 89);
+
+        /* The condition in this for loop compares the counter variable 'i' with the length of contents inside 'xPosition' array and increments 'i' by one. */
+        for (var i = 0; i < xPositions.length; i++) {
+            noStroke();
+
+            //This is a special colouring statement just to make it look more awesome!
+            fill(random(0, 400), random(10, 400), random(20, 400));
+
+            /* This part of the code draws one individual rain drop called inside the array, which is contained in the 'i' variable, and increments 'yPositions' up to 5. */
+            ellipse(xPositions[i], yPositions[i], 10, 10);
+            yPositions[i] += 5;
+
+            /* this part of the code stops each rain drop from going passed the screen, it resets 'yPositions' to zero, if the value of 'yPositions' go passed 400.  */
+            if(yPositions[i] > 400) {
+                yPositions[i] = 0;
+            }
+        }
+};
+
+/** Written and Modified by Tatum Roaquin EST Apr 13, 2016 */

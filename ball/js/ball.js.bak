@@ -1,0 +1,55 @@
+var sketchProc = function(processingInstance) {
+with (processingInstance) {
+   size(400, 400); 
+   frameRate(30);
+noStroke();
+
+// A 't' variable is created
+var t = 0;
+
+// A 'y' variable is created
+var y = 0;
+
+// This repeatedly runs the code that follows.
+var draw = function() {
+
+    // This background() function sets the color for the sky.
+    background(194, 194, 255);
+
+    // This fill() function sets the color for the ground
+    fill(255, 255, 255);
+
+    // This rect() function creates the ground.
+    rect(0, 250, width, 150);
+
+    // This calculates y (y = -0.02 x t^2 + 3.5 x t)
+    y = -0.02*t*t + 3.5*t;
+
+    // The shadow gets lighter as the value of 'y' increases.
+    var grey = 0.1 * y + 200;
+
+    // The shadow gets wider as the value of 'y' increases.
+    var shadowSize =  0.2 * y + 50;
+
+    // This fill() function is used to set the color of the shadow, the parameters for this function depends on the 'grey' variable.
+    fill(grey, grey, grey);
+
+    // This draws the shadow, the width of the shadow depends on 'shadowSize' variable.
+    ellipse(200, 300, shadowSize, 10);
+
+    // If this variable is not on the equation the ball bounces on the opposite orientation. This variable shifts the orientation of the gravity on the fake world.
+    var correctedY = 250 - y;
+
+    fill(255, 0, 0);
+    ellipse(200, correctedY, 50, 50);
+
+    if(y < 0) {
+        t = 0;
+    }
+
+   t += 5;
+};
+}};
+var canvas = document.getElementById("canvas"); 
+var processingInstance = new Processing(canvas, sketchProc); 
+

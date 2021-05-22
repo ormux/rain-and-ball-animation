@@ -1,0 +1,38 @@
+<html> 
+   <head>
+      <title>My First Creations</title> 
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/main.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   </head>
+
+   <body>
+      <h1 class="center green" >My First Creations</h1><br>
+      <div align="center">
+         <iframe id="rain"></iframe>
+         <iframe id="ball"></iframe>
+      </div>
+      <br>
+      <script>
+         $(document).ready(function() {
+            $("#rain").attr("src", "rain/rain.html");
+            $("#ball").attr("src", "ball/ball.html");
+         });
+      </script>
+
+      <div class="container text-center green">
+         <p>In April 13, 2016 I began to learn coding through <a href="www.khanacademy.org">Khan Academy</a> by taking the course <a href="https://www.khanacademy.org/computing/computer-programming/programming">Intro to JS: Drawing & Animation</a></p>
+         <p>These are my original coding projects when I was 16 years old, it is a simple animation that goes on forever.
+         And unlike traditional coding journeys I didn't start with the infamous "hello world" I started with animation.
+         These two are dear to me because it inspired me to create much more complex animations and simple web games.
+         I almost thought I lost these two projects because Khan Academy already cleared by projects history.
+         Luckily I had them saved locally somewhere in my computer and it took me 1 hour to figure out how run them properly.</p>
+
+         <p>The backbone of Khan Academy's animation editor is the original <a href="http://processingjs.org/">ProcessingJS</a> library which is now obsolete.
+         I recalled <a href="https://p5js.org/">p5.js</a> as one of the few "processing engines" so I tried running it with that. But it failed so I search and found this <a href="https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations/advanced-development-tools/a/using-processingjs-outside-khan-academy">article</a>.
+         Surely enough this worked but I had to organise it a bit so it is not messy to look at so I made this page just so I can showcase these two animations of mine.</p>
+      </div>
+   </body>
+</html>
