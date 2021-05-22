@@ -9,7 +9,7 @@
    <img alt="javascript" src="images/ball.png" width="40%">
 </div>
 
-<h5 align="center">technologies</h5>
+<h4 align="center">technologies used</h4>
 <div align="center">
    <img alt="javascript" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript">
    <img alt="jquery" src="https://img.shields.io/badge/-jQuery-black?logo=jquery&logoColor=cyan">
