@@ -13,5 +13,5 @@
 <div align="center">
    <img alt="javascript" src="https://img.shields.io/badge/-JavaScript-black?logo=javascript">
    <img alt="jquery" src="https://img.shields.io/badge/-jQuery-black?logo=jquery&logoColor=cyan">
-   <img alt="processing" src="https://img.shields.io/badge/-ProcessingJS-black?logo=p5-dot-js&logoColor=magenta">
+   <img alt="processingjs" src="https://img.shields.io/badge/-ProcessingJS-black?logo=processing+foundation&logoColor=cyan">
 </div>
